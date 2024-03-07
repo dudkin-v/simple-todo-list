@@ -1,0 +1,63 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--blue-700);
+  overflow: hidden;
+
+  &__title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    user-select: none;
+
+    &-letter {
+      display: inline-block;
+      line-height: 1;
+      font-weight: 700;
+      font-size: min(35vw, 33.333vh);
+      color: var(--white);
+      opacity: 0;
+      animation: show-letter .1s linear forwards;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 3%;
+    right: 50%;
+    display: inline-block;
+    opacity: 0;
+    animation: show-button .3s linear forwards;
+
+    &-icon {
+      width: min(25vw, 150px) !important;
+      height: auto !important;
+      fill: var(--rose-500) !important;
+    }
+  }
+}
+
+@keyframes show-letter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-button {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}

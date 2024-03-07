@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import AppRoutes from 'src/pages'
+import AppRoutes from './pages'
 
 const App: FC = () => {
   return (
